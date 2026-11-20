@@ -80,11 +80,6 @@ ol[role="list"] {
 
 /****** SPECIFIC SETTINGS *******/
 
-body {
-  min-height: 100vh;
-  background-color: var(--background-dark);
-}
-
 h1 {
   color: #a10000;
   font-weight: var(--fw-bold);
