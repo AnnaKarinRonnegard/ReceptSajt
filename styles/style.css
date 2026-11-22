@@ -4,7 +4,8 @@
   /*** margin ***/
   --m-space-large: 4rem;
   --m-space-medium: 2rem;
-
+  /*** font-size ***/
+  --fs-large: 1.5rem;
 }
 
 /***** RESET *****/
@@ -48,6 +49,10 @@ h3 {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-wrap: pretty; /* Ser till att enstaka ord ej finns ensamt under */
+  overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
+  hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
+  /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
 }
 
 /***Specific settings***/
@@ -75,10 +80,10 @@ hr {
 }
 
 p {
-    font-family:
+  font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-wrap: pretty; /* Ser till att enstaka ord ej finns ensamt under */
   overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
   hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
@@ -90,14 +95,15 @@ li {
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 2rem;
-  text-decoration: none;
   list-style-type: none;
-  a {
-    text-decoration: none;
-    list-style-type: none;
-  }
 }
 
+a {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
 .header-container {
   margin-block: var(--m-space-large);
 }
@@ -106,7 +112,7 @@ li {
   margin: var(--m-space-medium);
 }
 
-.section1 {
+.section1-div1 {
   background-image: url("../images/Gullvivor.jpg");
   background-size: cover;
   min-height: 300px;
@@ -114,7 +120,7 @@ li {
   background-repeat: no-repeat;
   align-content: center;
   text-align: center;
-  .section1-content {
+  .section1-div1-content {
     position: relative;
     z-index: 2;
     color: white;
@@ -125,8 +131,7 @@ li {
   }
 }
 
-
-.section1::before {
+.section1-div:before {
   .blur-container::before {
     content: "";
     position: absolute;
@@ -145,14 +150,14 @@ li {
   }
 }
 
-.section2 {
+.section1-div2 {
   margin: var(--m-space-large);
   padding-inline: 6rem;
   padding-block: 2rem;
 }
 
-.section3 {
-  --min-col-size: 450px;
+.section1-div3 {
+  --min-col-size: 500px;
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(
@@ -167,44 +172,58 @@ li {
     justify-items: center;
     padding: 3rem;
     img {
+      margin-block-end: var(--m-space-medium);
       min-height: 250px;
     }
   }
-  h3 {
-    margin-block-start: var(--m-space-medium); 
-  }
 }
 
-.button {
+.button1 {
   width: fit-content;
   text-align: center;
   padding-inline: 1.5rem;
   padding-block: 1rem;
   background-color: rgb(230, 230, 255);
+  color: black;
 }
 
 .button2 {
   width: fit-content;
   text-align: center;
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  background-color: rgb(255, 230, 230);
+  color: black;
+}
+
+.button3 {
+  width: fit-content;
+  text-align: center;
   padding-inline: 1rem;
   padding-block: 0.75rem;
   background-color: rgb(230, 230, 255);
+  color: black;
 }
 
-
 .link-elements1 {
-  margin-inline-end: var(--m-space-medium); 
+  margin-inline-end: var(--m-space-medium);
   gap: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  :first-child {
-    color: brown;
+  :focus-visible {
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
   }
 }
 
-.articel2-container {
-  margin: var(--m-space-medium);
+.link-elements1 .link {
+  color: brown;
+  justify-self: flex-start;
+}
+
+.section2-container {
+  margin-block: var(--m-space-medium);
   --min-col-size: 600px;
   display: grid;
   gap: 4rem;
@@ -213,35 +232,43 @@ li {
     minmax(min(var(--min-col-size), 100%), 1fr)
   );
 }
+.section2-div1 {
+  margin-block-start: 1.5rem;
+}
 
-.articel2-section {
+.section2-aside {
   display: flex;
   flex-direction: column;
   a {
-    margin-block: 1.5rem;
-    font-size: 1.5rem;
+    margin-block: 1rem;
+    font-size: var(--fs-large);
     font-family:
       "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-decoration: none;
     list-style-type: none;
-    color: black;
+  }
+  h2 {
+    margin-block-start: var(--m-space-medium);
   }
 }
-
-.articel2-links {
-  margin-block: var(--m-space-medium);
-  display: flex;
-  flex-direction: column;
-}
-
-.articel2-p {
-  margin-block-start: var(--m-space-medium);
+.section1-div1 {
+  h2 {
+    margin: var(--m-space-medium);
+  }
 }
 
 .link-elements2 {
   display: flex;
   justify-content: space-between;
+}
+
+.link-elements3 {
+  font-size: var(--fs-large);
+  font-weight: bold;
+  &:focus-visible {
+    padding: 0.3em;
+  }
 }
 
 .site-footer {

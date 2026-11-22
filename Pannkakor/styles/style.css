@@ -12,7 +12,6 @@
   --fw-bold: 700;
 
   /*** color ***/
-  --background-dark: #270202;
   --background-light: #fcfcfc;
 }
 
@@ -81,7 +80,7 @@ ol[role="list"] {
 /****** SPECIFIC SETTINGS *******/
 
 h1 {
-  color: #a10000;
+  color: #750075;
   font-weight: var(--fw-bold);
   font-style: bold;
   font-size: 2.3rem;
@@ -137,9 +136,18 @@ li {
   }
 }
 
-.main-container {
+nav {
+  padding-block: 1.5rem;
+  background-color: var(--background-light);
+}
+
+body {
+  background-color: rgb(255, 240, 240);
+}
+
+.main-container-pannkakor {
   /* Innehåller allt */
-  width: 100vw; 
+  width: 100vw;
   max-width: 1280px; /* Begränsar storleken*/
   height: 100hw;
   margin: auto; /* Lägger innehållet centrerat */
@@ -172,8 +180,13 @@ li {
   flex-direction: column;
   height: 100%;
 
-  p { /* Finns bara en */
-    background-color: #ebebeb; /* Skapar ljusblå bakgrund till text */
+  p {
+    /* Finns bara en */
+    background-color: rgb(
+      230,
+      230,
+      255
+    ); /* Skapar ljusblå bakgrund till text */
     margin-block-start: var(--m-space-big);
     padding: 1em;
   }
@@ -242,7 +255,7 @@ li {
 
 .footer {
   justify-items: center;
-  color: var(--background-light);
+  color: #750075;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
