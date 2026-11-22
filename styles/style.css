@@ -206,9 +206,10 @@ a {
 }
 
 .link-elements1 {
-  margin-inline-end: var(--m-space-medium);
+  margin-inline: var(--m-space-medium);
   gap: 3rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   :focus-visible {
@@ -217,9 +218,8 @@ a {
   }
 }
 
-.link-elements1 .link {
-  color: brown;
-  justify-self: flex-start;
+.link-elements1 li:first-child {
+  margin-inline-end: auto;
 }
 
 .section2-container {
