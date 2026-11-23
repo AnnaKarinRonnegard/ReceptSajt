@@ -147,10 +147,11 @@ body {
 
 .main-container-pannkakor {
   /* Innehåller allt */
+  display: flex;
+  margin: auto;
   width: 100vw;
   max-width: 1280px; /* Begränsar storleken*/
   height: 100hw;
-  margin: auto; /* Lägger innehållet centrerat */
   padding-block: 3em;
   padding-inline: 2em;
   background-color: var(--background-light);

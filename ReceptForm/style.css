@@ -1,0 +1,16 @@
+
+:root {
+  /*** padding ***/
+  --p-space-medium: 2rem;
+  /*** margin ***/
+  --m-space-large: 4rem;
+  --m-space-medium: 2rem;
+  /*** font-size ***/
+  --fs-large: 1.5rem;
+}
+
+.section-forms {
+    margin-block: var(--m-space-large);
+    display: flex;
+    justify-content: center;
+}
