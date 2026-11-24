@@ -73,15 +73,23 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
-/* hr {
-  margin-block: var(--m-space-large);
-} */
+h4 {
+  font-size: 1.125rem;
+}
 
 p {
-  font-size: 1.125rem;
+  font-size: 1.025rem;
+  margin-block: 0.0625rem; /* Lägger till margin mellan p-taggar, då de var borta */
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-wrap: pretty; /* Ser till att enstaka ord ej finns ensamt under */
+  overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
+  hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
+  /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
 }
 
 nav {
@@ -257,7 +265,7 @@ a {
     text-decoration: none;
     list-style-type: none;
   }
-  h2 {
+  h3 {
     margin-block-start: var(--m-space-medium);
   }
 }

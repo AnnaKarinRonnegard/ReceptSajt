@@ -42,14 +42,6 @@ svg {
   max-width: 100%;
 }
 
-p {
-  font-size: 1rem;
-}
-
-h4 {
-  font-size: 1.125rem;
-}
-
 .main-container-forms {
   margin-inline: auto;
   width: 100dvw;
@@ -62,10 +54,7 @@ h4 {
 .section-forms {
   width: fit-content;
   justify-self: center;
-  margin-block: var(--m-space-large);
   background-color: var(--background-light);
-  padding-block: 3em;
-  padding-inline: 2em;
   display: grid;
   gap: 2rem;
 }
@@ -78,8 +67,10 @@ form {
 
 .form-div {
   padding-inline: var(--p-space-medium);
+  padding-block: 0.5rem;
   border: solid 0.03rem rgb(150, 150, 255);
 }
+
 div {
   padding-block: var(--m-space-medium);
 }
@@ -112,15 +103,17 @@ textarea {
 
 fieldset {
   margin-block-start: var(--m-space-medium);
-  border: 1px solid rgb(200, 200, 255);
-  border-radius: 4px;
-  padding: 1rem;
+  border: 0.1rem solid rgb(190, 190, 255);
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+  padding-block-start: 1rem;
 }
 
 button {
   background-color: rgb(225, 225, 255);
   margin-block-start: var(--m-space-medium);
-  padding: 0.75rem 1rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
   cursor: pointer;
 }
 

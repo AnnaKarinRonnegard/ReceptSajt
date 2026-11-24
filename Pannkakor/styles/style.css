@@ -49,28 +49,6 @@ svg {
 
 /***** BASIC SETTINGS ******/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  text-wrap: balance; /* Ser till att texten avvägs jämnt vid radbryt */
-  overflow-wrap: break-word;
-  hyphens: auto; /* Avstavar efter ordlista - ej länkar */
-}
-
-p {
-  text-wrap: pretty; /* Ser till att enstaka ord ej finns ensamt under */
-  margin-block: var(
-    --m-space-short
-  ); /* Lägger till margin mellan p-taggar, då de var borta */
-  overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymma än ordlängd */
-  hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
-  /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
-}
-
 /* Ta bort list-style på ul och ol element med en list role. OBS sätt role="list" på ol- eller ul-tag */
 ul[role="list"],
 ol[role="list"] {
@@ -82,8 +60,6 @@ ol[role="list"] {
 h1 {
   color: #750075;
   font-weight: var(--fw-bold);
-  font-style: bold;
-  font-size: 2.3rem;
   &:focus-visible {
     padding-block: 0.2em;
     padding-inline: 0.3em;
@@ -94,7 +70,6 @@ h1 {
 h2 {
   margin-block-start: 2rem;
   margin-block-end: var(--m-space-short);
-  font-size: 1.5rem;
   &:focus-visible {
     margin-block-start: 3rem;
     margin-block-end: var(--m-space-medium);
