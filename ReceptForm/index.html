@@ -12,21 +12,111 @@
 <header class="header-container">
     <nav>
         <ul class="link-elements1">
-            <li><a class="button1" href="index.html">Hem</a></li>
+            <li><a class="button1" href="../index.html">Hem</a></li>
             <li><a href="#">Recept</a></li>
             <li><a href="#">Om sajten </a></li>
             <li><a class="button2" href="#">Dela Recept</a></li>
         </ul>
     </nav>
-    <main class="main-container">
-        <hr>
-        <section class="section-forms">
-            <h1>Test</h1>
-            <form action="" method="get">
-
-            </form>
-        </section>
-    </main>
+    <hr>
 </header>
+<main class="main-container main-container-forms">
+    <section class="section-forms">
+        <h1>Dela dina recept</h1>
+        <h4>Fyll i formuläret nedan. När du trycker på spara, så sparas dina recept till recept-sajten. </h4>
+        <h4>Frågorna markerade med *
+            är obligatoriska.</h4>
+        <form action="" method="get">
+            <div class="form-div">
+                <fieldset>
+                    <legend>
+                        <h4>Om receptet</h4>
+                    </legend>
+                    <label for="recept-name-id">Receptets namn *</label>
+                    <input type="text" id="recept-name-id" name="recept-name" aria-describedby="name-help" required
+                        maxlength="50" autocomplete="recept-name">
+                    <p id="name-help">Ange receptets namn, max 50 bokstäver.</p>
+
+                    <div>
+                        <label for="portions-id">Mängd</label>
+                        <select id="portions-id" name="portions" aria-describedby="portions-help">
+                            <option value="">Antalet portioner</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                        </select>
+                        <p id="portions-help">Ange antalet portioner.</p>
+                    </div>
+
+                    <div>
+                        <label for="time-id">Tidsåtgång i minuter</label>
+                        <input type="number" inputmode="numeric" id="time-id" name="time" aria-describedby="time-help">
+                        <p id="time-help">Ange hur många minuter det tar.</p>
+                        <p>(Endast heltal accepteras)</p>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h4>Svårhetsgrad</h4>
+                    </legend>
+                    <div class="div-radio">
+                        <input type="radio" id="easy-id" name="difficulty-level" value="easy">
+                        <label for="easy-id">Lätt</label>
+                    </div>
+                    <div class="div-radio">
+                        <input type="radio" id="medium-id" name="difficulty-level" value="average">
+                        <label for="medium-id">Mellan</label>
+                    </div>
+                    <div class="div-radio">
+                        <input type="radio" id="advanced-id" name="difficulty-level" value="advanced">
+                        <label for="advanced-id">Svår</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h4>Om dig</h4>
+                    </legend>
+                    <label for="recept-name-id">Ditt namn</label>
+                    <input type="text" id="user-name-id" name="user-name" aria-describedby="user-name-help"
+                        maxlength="30" autocomplete="user-name">
+                    <p id="user-name-help">Skriv in ditt namn, max 30 bokstäver</p>
+                    <div>
+                        <label for="email-id">E-postadress *</label>
+                        <input type="email" inputmode="email" id="email-id" name="user-email"
+                            placeholder="example@gmail.com" aria-describedby="emal-help" required
+                            autocomplete="user-email">
+                        <p id="emal-help">Ange din email-adress i giltigt format.</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h4>Receptet</h4>
+                    </legend>
+                    <label for="recept-name-id">Ingredienser *</label>
+                    <textarea id="ingredients-id" name="ingridients" rows="4" aria-describedby="ingridients-help"
+                        required></textarea>
+                    <p id="ingridients-help">Ange alla ingredienser.</p>
+
+                    <div>
+                        <label for="how-to-do-id">Så gör du *</label>
+                        <textarea id="how-to-do-id" name="how-to-do" rows="4" aria-describedby="how-to-do-help"
+                            required></textarea>
+                        <p id="how-to-do-help">Beskriv hur man gör.</p>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Spara</button>
+            </div>
+        </form>
+    </section>
+</main>
+<footer class="footer">
+    <hr>
+    <p>&copy; 2026 Anna-Karin Rönnegård</p>
+</footer>
 
 </html>

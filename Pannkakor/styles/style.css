@@ -106,7 +106,6 @@ h2 {
 
 h3 {
   font-size: 1.15rem;
-  margin-block: var(--m-space-short);
 }
 
 img {
@@ -114,7 +113,11 @@ img {
   object-fit: cover;
 }
 
-li {
+.ingredients li {
+  line-height: 2; /* skriver över resetens default line-height på 1.5 */
+}
+
+.how-to-do li {
   line-height: 2; /* skriver över resetens default line-height på 1.5 */
 }
 
@@ -137,8 +140,12 @@ li {
 }
 
 nav {
-  padding-block: 1.5rem;
+  padding-block: 2rem;
   background-color: var(--background-light);
+}
+
+.header-container {
+  margin-block-start: 2rem;
 }
 
 body {
@@ -148,12 +155,9 @@ body {
 .main-container-pannkakor {
   /* Innehåller allt */
   display: flex;
-  margin: auto;
-  width: 100vw;
+  margin-inline: auto;
+  width: 100dvw;
   max-width: 1280px; /* Begränsar storleken*/
-  height: 100hw;
-  padding-block: 3em;
-  padding-inline: 2em;
   background-color: var(--background-light);
   margin-bottom: var(
     --m-space-big

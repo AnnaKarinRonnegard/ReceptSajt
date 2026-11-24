@@ -44,10 +44,7 @@ svg {
 
 h1,
 h2,
-h3,
-p,
-li,
-a {
+h3 {
   font-weight: bold;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -80,7 +77,8 @@ p {
   font-size: 1.25rem;
 }
 
-li {
+.link-elements1 li,
+.link-elements2 li {
   font-size: 2rem;
   list-style-type: none;
 }
@@ -90,7 +88,8 @@ a {
 }
 
 .header-container {
-  margin-block: var(--m-space-large);
+  margin-block-start: var(--m-space-large);
+  margin-inline: var(--m-space-medium);
 }
 
 .main-container {
@@ -170,6 +169,7 @@ a {
   padding-block: 1rem;
   background-color: rgb(230, 230, 255);
   color: black;
+  cursor: pointer;
 }
 
 .button2 {
@@ -179,6 +179,7 @@ a {
   padding-block: 1rem;
   background-color: rgb(255, 230, 230);
   color: black;
+  cursor: pointer;
 }
 
 .button3 {
@@ -188,6 +189,7 @@ a {
   padding-block: 0.75rem;
   background-color: rgb(230, 230, 255);
   color: black;
+  cursor: pointer;
 }
 
 .link-elements1 {
