@@ -6,7 +6,7 @@
   --m-space-medium: 2rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
-      /*** color ***/
+  /*** color ***/
   --background-light: #fcfcfc;
 }
 
@@ -55,7 +55,7 @@ h4 {
   width: 100dvw;
   max-width: 600px; /* Begränsar storleken*/
   margin-block-end: var(
-    --m-space-large
+    --m-space-medium
   ); /* Lägger en bit bakgrundsfärg under containern */
 }
 
@@ -149,6 +149,7 @@ input[type="radio"] {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.25rem;
   margin-inline: var(--m-space-medium);
+  margin-block-end: 2rem;
   hr {
     width: 100%;
   }

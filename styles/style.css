@@ -4,9 +4,10 @@
   /*** margin ***/
   --m-space-large: 4rem;
   --m-space-medium: 2rem;
+  --m-space-small: 1.5rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
-    /*** color ***/
+  /*** color ***/
   --background-light: #fcfcfc;
 }
 
@@ -168,42 +169,44 @@ a {
   /* grid-auto-flow: row; */
   card {
     border: 0.0625rem, solid, black;
+    border-radius: 0.5rem;
     text-align: center;
     align-items: center;
     justify-items: center;
     padding: 1.5rem;
     img {
-      margin-block-end: 1.5rem;
+      margin-block-end: var(--m-space-small);
       min-height: 100px;
     }
   }
 }
 
 .button1 {
-  width: fit-content;
+  border: 0.0005rem, solid, black;
   text-align: center;
-  padding-inline: 1.5rem;
-  padding-block: 1rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
   background-color: rgb(225, 225, 255);
   color: black;
   cursor: pointer;
 }
 
 .button2 {
-  width: fit-content;
+  border: 0.0005rem, solid, black;
   text-align: center;
-  padding-inline: 1.5rem;
-  padding-block: 1rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
   background-color: rgb(255, 220, 220);
   color: black;
   cursor: pointer;
 }
 
 .button3 {
-  width: fit-content;
+  width: 10ch;
+  border: 0.0005rem, solid, black;
   text-align: center;
-  padding-inline: 1rem;
-  padding-block: 0.75rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
   background-color: rgb(225, 225, 255);
   color: black;
   cursor: pointer;
@@ -227,8 +230,8 @@ a {
 }
 
 .section2-container {
+  --min-col-size: 100px;
   margin-block: var(--m-space-medium);
-  --min-col-size: 600px;
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(
@@ -237,11 +240,13 @@ a {
   );
 }
 .section2-div1 {
-  margin-block-start: 1.5rem;
+  margin-block-start: var(--m-space-small);
 }
 
 .section2-aside {
   display: flex;
+  align-items: start;
+  justify-content: flex-end;
   flex-direction: column;
   a {
     margin-block: 1rem;
@@ -256,10 +261,15 @@ a {
     margin-block-start: var(--m-space-medium);
   }
 }
+
 .section1-div1 {
   h2 {
     margin: var(--m-space-medium);
   }
+}
+
+.site-hr {
+  margin-block-start: var(--m-space-large);
 }
 
 .link-elements2 {
