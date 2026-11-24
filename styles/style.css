@@ -6,6 +6,8 @@
   --m-space-medium: 2rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
+    /*** color ***/
+  --background-light: #fcfcfc;
 }
 
 /***** RESET *****/
@@ -42,6 +44,10 @@ svg {
 
 /****Basic settings*****/
 
+body {
+  background-color: rgb(255, 240, 240);
+}
+
 h1,
 h2,
 h3 {
@@ -69,12 +75,21 @@ h3 {
   font-size: 1.25rem;
 }
 
-hr {
+/* hr {
   margin-block: var(--m-space-large);
-}
+} */
 
 p {
   font-size: 1.125rem;
+}
+
+nav {
+  padding-block: var(--p-space-medium);
+  background-color: var(--background-light);
+}
+
+.header-container {
+  margin-block-start: var(--m-space-medium);
 }
 
 .link-elements1 li,
@@ -94,12 +109,14 @@ a {
 
 .main-container {
   margin: var(--m-space-medium);
+  padding: var(--p-space-medium);
+  background-color: var(--background-light);
 }
 
 .section1-div1 {
   background-image: url("../images/Gullvivor.jpg");
   background-size: cover;
-  min-height: 300px;
+  min-height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   align-content: center;
@@ -141,9 +158,9 @@ a {
 }
 
 .section1-div3 {
-  --min-col-size: 500px;
+  --min-col-size: 200px;
   display: grid;
-  gap: 4rem;
+  gap: 2rem;
   grid-template-columns: repeat(
     auto-fit,
     minmax(min(var(--min-col-size), 100%), 1fr)
@@ -154,10 +171,10 @@ a {
     text-align: center;
     align-items: center;
     justify-items: center;
-    padding: 3rem;
+    padding: 1.5rem;
     img {
-      margin-block-end: var(--m-space-medium);
-      min-height: 250px;
+      margin-block-end: 1.5rem;
+      min-height: 100px;
     }
   }
 }
@@ -251,7 +268,7 @@ a {
 }
 
 .link-elements3 {
-  font-size: var(--fs-large);
+  font-size: 1.125rem;
   font-weight: bold;
   &:focus-visible {
     padding: 0.3em;
@@ -260,6 +277,8 @@ a {
 
 .site-footer {
   margin: var(--m-space-medium);
+  padding-block: var(--p-space-medium);
+  background-color: var(--background-light);
   justify-items: start;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
