@@ -92,7 +92,7 @@ h1 {
 }
 
 h2 {
-  margin-block-start: 3rem;
+  margin-block-start: 2rem;
   margin-block-end: var(--m-space-short);
   font-size: 1.5rem;
   &:focus-visible {
@@ -102,10 +102,6 @@ h2 {
     padding-inline: 0.5em;
     width: fit-content;
   }
-}
-
-h3 {
-  font-size: 1.15rem;
 }
 
 img {
@@ -157,14 +153,15 @@ body {
   display: flex;
   margin-inline: auto;
   width: 100dvw;
-  max-width: 1280px; /* Begränsar storleken*/
+  max-width: 800px; /* Begränsar storleken*/
   background-color: var(--background-light);
-  margin-bottom: var(
+  margin-block-end: var(
     --m-space-big
   ); /* Lägger en bit bakgrundsfärg under containern */
 }
 
 .articel-columns {
+  padding-inline: var(--p-space-medium);
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 lika stora kolumner */
   column-gap: var(--m-space-medium);
