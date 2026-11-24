@@ -144,10 +144,6 @@ nav {
   margin-block-start: 2rem;
 }
 
-body {
-  background-color: rgb(255, 240, 240);
-}
-
 .main-container-pannkakor {
   /* Innehåller allt */
   display: flex;

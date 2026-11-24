@@ -6,8 +6,6 @@
   --m-space-medium: 2rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
-  /*** color ***/
-  --background-light: #fcfcfc;
 }
 
 /***** RESET *****/
@@ -48,19 +46,6 @@ p {
 
 h4 {
   font-size: 1.125rem;
-}
-
-nav {
-  padding-block: var(--p-space-medium);
-  background-color: var(--background-light);
-}
-
-.header-container {
-  margin-block-start: var(--m-space-medium);
-}
-
-body {
-  background-color: rgb(255, 240, 240);
 }
 
 .main-container-forms {
