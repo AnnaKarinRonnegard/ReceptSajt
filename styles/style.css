@@ -45,7 +45,7 @@ svg {
 /****Basic settings*****/
 
 body {
-  background-color: rgb(255, 240, 240);
+  background-color: rgb(255, 220, 220);
 }
 
 h1,
@@ -124,7 +124,7 @@ a {
   .section1-div1-content {
     position: relative;
     z-index: 2;
-    color: white;
+    color: var(--background-light);
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -184,7 +184,7 @@ a {
   text-align: center;
   padding-inline: 1.5rem;
   padding-block: 1rem;
-  background-color: rgb(230, 230, 255);
+  background-color: rgb(225, 225, 255);
   color: black;
   cursor: pointer;
 }
@@ -194,7 +194,7 @@ a {
   text-align: center;
   padding-inline: 1.5rem;
   padding-block: 1rem;
-  background-color: rgb(255, 230, 230);
+  background-color: rgb(255, 220, 220);
   color: black;
   cursor: pointer;
 }
@@ -204,7 +204,7 @@ a {
   text-align: center;
   padding-inline: 1rem;
   padding-block: 0.75rem;
-  background-color: rgb(230, 230, 255);
+  background-color: rgb(225, 225, 255);
   color: black;
   cursor: pointer;
 }
@@ -277,7 +277,7 @@ a {
 
 .site-footer {
   margin: var(--m-space-medium);
-  padding-block: var(--p-space-medium);
+  padding: var(--p-space-medium);
   background-color: var(--background-light);
   justify-items: start;
   font-family:

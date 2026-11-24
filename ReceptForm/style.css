@@ -6,6 +6,8 @@
   --m-space-medium: 2rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
+      /*** color ***/
+  --background-light: #fcfcfc;
 }
 
 /***** RESET *****/
