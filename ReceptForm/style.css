@@ -54,7 +54,6 @@ svg {
 .section-forms {
   width: fit-content;
   justify-self: center;
-  background-color: var(--background-light);
   display: grid;
   gap: 2rem;
 }
