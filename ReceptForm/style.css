@@ -66,6 +66,7 @@ form {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: var(--AK-black);
 }
 
 .form-div {
@@ -126,6 +127,8 @@ fieldset {
 }
 
 button {
+  border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
   background-color: var(--AK-light-blue);
   margin-block-start: var(--m-space-medium);
   padding-inline: 0.75rem;
