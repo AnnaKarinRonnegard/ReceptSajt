@@ -9,7 +9,7 @@
   --fs-large: 1.5rem;
   /*** color ***/
   --AK-white: oklch(99.1% 0.0001 271);
-  --AK-black: #202020;
+  --AK-black: oklch(24.3% 0.00003 271);
   --AK-pink: oklch(92.4% 0.039 17.7);
   --AK-blue: oklch(92% 0.040 285.5);
 }

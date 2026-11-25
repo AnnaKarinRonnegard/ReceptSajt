@@ -12,7 +12,10 @@
   --fw-bold: 700;
 
   /*** color ***/
-  --background-light: #fcfcfc;
+  --AK-white: oklch(99.1% 0.0001 271);
+  --AK-black: oklch(24.3% 0.00003 271);
+  --AK-blue: oklch(92% 0.04 285.5);
+  --AK-purple: oklch(39.5% 0.18 328);
 }
 
 /***** RESET ******/
@@ -58,7 +61,7 @@ ol[role="list"] {
 /****** SPECIFIC SETTINGS *******/
 
 h1 {
-  color: #750075;
+  color: var(--AK-purple);
   font-weight: var(--fw-bold);
   &:focus-visible {
     padding-block: 0.2em;
@@ -101,22 +104,13 @@ img {
 
   padding-block: 0.75em;
   padding-inline: var(--p-space-medium);
-  background: var(--background-light);
-  color: var(--background-dark);
+  background: var(--AK-white);
+  color: var(--AK-black);
   font-weight: var(--fw-bold);
   border-radius: 0.2em;
   &:focus-visible {
     top: 1rem; /* Visar länken inom webbsidan */
   }
-}
-
-nav {
-  padding-block: 2rem;
-  background-color: var(--background-light);
-}
-
-.header-container {
-  margin-block-start: 2rem;
 }
 
 .main-container-pannkakor {
@@ -125,7 +119,7 @@ nav {
   margin-inline: auto;
   width: 100dvw;
   max-width: 800px; /* Begränsar storleken*/
-  background-color: var(--background-light);
+  background-color: var(--AK-white);
   margin-block-end: var(
     --m-space-big
   ); /* Lägger en bit bakgrundsfärg under containern */
@@ -155,11 +149,7 @@ nav {
 
   p {
     /* Finns bara en */
-    background-color: rgb(
-      230,
-      230,
-      255
-    ); /* Skapar ljusblå bakgrund till text */
+    background-color: oklch(from var(--AK-blue) 95% c h); /* Skapar ljusblå bakgrund till text */
     margin-block-start: var(--m-space-big);
     padding: 1em;
   }
@@ -175,7 +165,7 @@ nav {
     /* Gemensamt för dd och dt */
     padding-block: var(--p-space-medium);
     text-align: center;
-    border: #270202 0.0625em solid;
+    border: var(--AK-black) 0.0625em solid;
     &:not(&:nth-child(n + 5)) {
       border-inline-end: none; /* Tar bort dubbel border */
     }
@@ -228,7 +218,7 @@ nav {
 
 .footer {
   justify-items: center;
-  color: #750075;
+  color: var(--AK-purple);
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
