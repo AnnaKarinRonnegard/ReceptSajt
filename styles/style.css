@@ -197,6 +197,7 @@ nav {
 
 .button1 {
   border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
@@ -207,6 +208,7 @@ nav {
 
 .button2 {
   border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
@@ -218,6 +220,7 @@ nav {
 .button3 {
   width: 10ch;
   border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
