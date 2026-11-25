@@ -8,7 +8,10 @@
   /*** font-size ***/
   --fs-large: 1.5rem;
   /*** color ***/
-  --background-light: #fcfcfc;
+  --AK-white: oklch(99.1% 0.0001 271);
+  --AK-black: #202020;
+  --AK-pink: oklch(92.4% 0.039 17.7);
+  --AK-blue: oklch(92% 0.040 285.5);
 }
 
 /***** RESET *****/
@@ -46,7 +49,7 @@ svg {
 /****Basic settings*****/
 
 body {
-  background-color: rgb(255, 220, 220);
+  background-color: var(--AK-pink);
 }
 
 h1,
@@ -60,6 +63,7 @@ h3 {
   overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
   hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
   /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
+  color: var(--AK-black);
 }
 
 /***Specific settings***/
@@ -78,6 +82,7 @@ h3 {
 
 h4 {
   font-size: 1.125rem;
+  color: var(--AK-black);
 }
 
 p {
@@ -90,11 +95,16 @@ p {
   overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
   hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
   /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
+  color: var(--AK-black);
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
   padding-block: var(--p-space-medium);
-  background-color: var(--background-light);
+  background-color: var(--AK-white);
 }
 
 .header-container {
@@ -107,10 +117,6 @@ nav {
   list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header-container {
   margin-block-start: var(--m-space-large);
   margin-inline: var(--m-space-medium);
@@ -119,13 +125,13 @@ a {
 .main-container {
   margin: var(--m-space-medium);
   padding: var(--p-space-medium);
-  background-color: var(--background-light);
+  background-color: var(--AK-white);
 }
 
 .section1-div1 {
-  background-image: url("../images/Gullvivor.jpg");
+  background-image: radial-gradient(ellipse, var(--AK-white), oklch(from var(--AK-blue) 80% c h));
   background-size: cover;
-  min-height: 200px;
+  min-height: 100px;
   background-position: center;
   background-repeat: no-repeat;
   align-content: center;
@@ -133,11 +139,11 @@ a {
   .section1-div1-content {
     position: relative;
     z-index: 2;
-    color: var(--background-light);
+    color: var(--AK-black);
     text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: oklch(from var(--AK-white) l c h / 0.2);
+    border-radius: 0.5rem;
   }
 }
 
@@ -176,7 +182,7 @@ a {
   );
   /* grid-auto-flow: row; */
   card {
-    border: 0.0625rem, solid, black;
+    border: 0.0625rem, solid, var(--AK-black);
     border-radius: 0.5rem;
     text-align: center;
     align-items: center;
@@ -190,33 +196,33 @@ a {
 }
 
 .button1 {
-  border: 0.0005rem, solid, black;
+  border: 0.0005rem, solid, var(--AK-black);
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
-  background-color: rgb(225, 225, 255);
-  color: black;
+  background-color: var(--AK-blue);
+  color: var(--AK-black);
   cursor: pointer;
 }
 
 .button2 {
-  border: 0.0005rem, solid, black;
+  border: 0.0005rem, solid, var(--AK-black);
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
-  background-color: rgb(255, 220, 220);
-  color: black;
+  background-color: oklch(from var(--AK-pink) 93.4% c h);
+  color: var(--AK-black);
   cursor: pointer;
 }
 
 .button3 {
   width: 10ch;
-  border: 0.0005rem, solid, black;
+  border: 0.0005rem, solid, var(--AK-black);
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
-  background-color: rgb(225, 225, 255);
-  color: black;
+  background-color: var(--AK-blue);
+  color: var(--AK-black);
   cursor: pointer;
 }
 
@@ -296,7 +302,7 @@ a {
 .site-footer {
   margin: var(--m-space-medium);
   padding: var(--p-space-medium);
-  background-color: var(--background-light);
+  background-color: var(--AK-white);
   justify-items: start;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
