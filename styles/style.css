@@ -11,7 +11,7 @@
   --AK-white: oklch(99.1% 0.0001 271);
   --AK-black: oklch(24.3% 0.00003 271);
   --AK-pink: oklch(92.4% 0.039 17.7);
-  --AK-blue: oklch(92% 0.040 285.5);
+  --AK-light-blue: oklch(92% 0.040 285.5);
 }
 
 /***** RESET *****/
@@ -129,7 +129,7 @@ nav {
 }
 
 .section1-div1 {
-  background-image: radial-gradient(ellipse, var(--AK-white), oklch(from var(--AK-blue) 80% c h));
+  background-image: radial-gradient(ellipse, var(--AK-white), oklch(from var(--AK-light-blue) 80% c h));
   background-size: cover;
   min-height: 100px;
   background-position: center;
@@ -200,7 +200,7 @@ nav {
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
-  background-color: var(--AK-blue);
+  background-color: var(--AK-light-blue);
   color: var(--AK-black);
   cursor: pointer;
 }
@@ -221,7 +221,7 @@ nav {
   text-align: center;
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
-  background-color: var(--AK-blue);
+  background-color: var(--AK-light-blue);
   color: var(--AK-black);
   cursor: pointer;
 }

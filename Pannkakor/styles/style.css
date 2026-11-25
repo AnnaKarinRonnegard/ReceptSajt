@@ -14,7 +14,7 @@
   /*** color ***/
   --AK-white: oklch(99.1% 0.0001 271);
   --AK-black: oklch(24.3% 0.00003 271);
-  --AK-blue: oklch(92% 0.04 285.5);
+  --AK-light-blue: oklch(92% 0.04 285.5);
   --AK-purple: oklch(39.5% 0.18 328);
 }
 
@@ -149,7 +149,7 @@ img {
 
   p {
     /* Finns bara en */
-    background-color: oklch(from var(--AK-blue) 95% c h); /* Skapar ljusblå bakgrund till text */
+    background-color: oklch(from var(--AK-light-blue) 95% c h); /* Skapar ljusblå bakgrund till text */
     margin-block-start: var(--m-space-big);
     padding: 1em;
   }
