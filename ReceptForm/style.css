@@ -45,7 +45,7 @@ svg {
 .main-container-forms {
   margin-inline: auto;
   width: 100dvw;
-  max-width: 600px; /* Begränsar storleken*/
+  max-width: 700px; /* Begränsar storleken*/
   margin-block-end: var(
     --m-space-medium
   ); /* Lägger en bit bakgrundsfärg under containern */
@@ -74,7 +74,7 @@ form {
 .group {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr, 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .group-item {
