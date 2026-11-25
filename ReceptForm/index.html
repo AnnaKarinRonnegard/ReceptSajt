@@ -37,22 +37,25 @@
                         maxlength="50" autocomplete="recept-name">
                     <p id="name-help">Ange receptets namn, max 50 bokstäver.</p>
 
-                    <div>
-                        <label for="portions-id">Mängd</label>
-                        <select id="portions-id" name="portions" aria-describedby="portions-help">
-                            <option value="">Antalet portioner</option>
-                            <option value="2">2</option>
-                            <option value="4">4</option>
-                            <option value="8">8</option>
-                        </select>
-                        <p id="portions-help">Ange antalet portioner.</p>
-                    </div>
+                    <div class="group">
+                        <div class="group-item">
+                            <label for="portions-id">Mängd</label>
+                            <select id="portions-id" name="portions" aria-describedby="portions-help">
+                                <option value="">Portioner</option>
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="8">8</option>
+                            </select>
+                            <p id="portions-help">Ange antalet portioner.</p>
+                        </div>
 
-                    <div>
-                        <label for="time-id">Tidsåtgång i minuter</label>
-                        <input type="number" inputmode="numeric" id="time-id" name="time" aria-describedby="time-help">
-                        <p id="time-help">Ange hur många minuter det tar.</p>
-                        <p>(Endast heltal accepteras)</p>
+                        <div class="group-item">
+                            <label for="time-id">Tidsåtgång</label>
+                            <input type="number" inputmode="numeric" id="time-id" name="time"
+                                aria-describedby="time-help">
+                            <p id="time-help">Ange tidsåtgången i minuter.</p>
+                            <p>(Endast heltal accepteras)</p>
+                        </div>
                     </div>
 
                 </fieldset>
@@ -79,7 +82,7 @@
                     <legend>
                         <h4>Om dig</h4>
                     </legend>
-                    <label for="recept-name-id">Ditt namn</label>
+                    <label for="user-name-id">Ditt namn</label>
                     <input type="text" id="user-name-id" name="user-name" aria-describedby="user-name-help"
                         maxlength="30" autocomplete="user-name">
                     <p id="user-name-help">Skriv in ditt namn, max 30 bokstäver</p>
@@ -96,7 +99,7 @@
                     <legend>
                         <h4>Receptet</h4>
                     </legend>
-                    <label for="recept-name-id">Ingredienser *</label>
+                    <label for="ingredients-id">Ingredienser *</label>
                     <textarea id="ingredients-id" name="ingridients" rows="4" aria-describedby="ingridients-help"
                         required></textarea>
                     <p id="ingridients-help">Ange alla ingredienser.</p>
