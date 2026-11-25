@@ -7,7 +7,11 @@
   /*** font-size ***/
   --fs-large: 1.5rem;
   /*** color ***/
-  --background-light: #fcfcfc;
+  --AK-white: oklch(99.1% 0.0001 271);
+  --AK-black: oklch(24.3% 0.00003 271);
+  --AK-purple: oklch(39.5% 0.18 328);
+  --AK-light-blue: oklch(92% 0.04 285.5);
+  --AK-blue: oklch(70% 0.15 285.5);
 }
 
 /***** RESET *****/
@@ -67,7 +71,8 @@ form {
 .form-div {
   padding-inline: var(--p-space-medium);
   padding-block: 0.5rem;
-  border: solid 0.03rem rgb(150, 150, 255);
+  border: solid 0.05rem var(--AK-blue);
+  border-radius: 0.5rem;
 }
 
 .group {
@@ -108,20 +113,20 @@ select,
 textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 0.0625rem solid #888;
+  border: 0.0625rem solid var(--AK-black);
   border-radius: 0.5rem;
 }
 
 fieldset {
   margin-block-start: var(--m-space-medium);
-  border: 0.1rem solid rgb(190, 190, 255);
+  border: 0.1rem solid oklch(from var(--AK-blue) 75% c h);
   border-radius: 0.5rem;
   padding-inline: 1rem;
   padding-block-start: 1rem;
 }
 
 button {
-  background-color: rgb(225, 225, 255);
+  background-color: var(--AK-light-blue);
   margin-block-start: var(--m-space-medium);
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
@@ -129,25 +134,25 @@ button {
 }
 
 :focus-visible {
-  outline: 0.2rem solid rgb(150, 150, 255);
+  outline: 0.2rem solid var(--AK-blue);
   outline-offset: 0.1rem;
 }
 
 input:user-invalid,
 select:user-invalid,
 textarea:user-invalid {
-  outline: 0.2rem solid #750075;
+  outline: 0.2rem solid var(--AK-purple);
   outline-offset: 0.2rem;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: rgb(150, 150, 255);
+  accent-color: var(--AK-blue);
 }
 
 .footer {
   justify-items: center;
-  color: #750075;
+  color: var(--AK-purple);
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
