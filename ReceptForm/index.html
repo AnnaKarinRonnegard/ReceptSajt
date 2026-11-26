@@ -23,8 +23,7 @@
     <section class="section-forms">
         <h1>Dela dina recept</h1>
         <h2>Fyll i formuläret nedan. När du trycker på spara, så sparas dina recept till recept-sajten. </h2>
-        <h2>Frågorna markerade med *
-            är obligatoriska.</h2>
+        <p>Obligatoriska frågor är markerade med *.</p>
         <form action="" method="get">
             <div class="form-div">
                 <fieldset class="fieldset1">
@@ -34,7 +33,7 @@
                     <label for="recept-name-id">Receptets namn *</label>
                     <input type="text" id="recept-name-id" name="recept-name" aria-describedby="name-help" required
                         maxlength="50" autocomplete>
-                    <p id="name-help">Ange receptets namn, max 50 bokstäver.</p>
+                    <p id="name-help">Max 50 bokstäver</p>
 
                     <div class="group">
                         <div class="group-item">
@@ -102,11 +101,11 @@
                     <p id="ingridients-help">Ange alla ingredienser.</p>
 
                     <div>
-                        <label for="how-to-do-id">Så gör du *</label>
+                        <label for="how-to-do-id">Hur man tillagar *</label>
                         <textarea id="how-to-do-id" name="how-to-do" rows="4" aria-describedby="how-to-do-help"
                             required></textarea>
-                        <p id="how-to-do-help">Beskriv hur man gör.</p>
-                    </div>
+                        <p id="how-to-do-help">Beskriv processen.</p>
+                    </div> 
                 </fieldset>
 
                 <button type="submit">Spara</button>
