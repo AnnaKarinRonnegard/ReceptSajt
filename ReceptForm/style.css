@@ -66,7 +66,7 @@ form {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color: var(--AK-black);
+  color: var(--AK-black);
 }
 
 .form-div {
@@ -76,16 +76,18 @@ form {
   border-radius: 0.5rem;
 }
 
-.group {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-}
+@media (min-width: 768px) {
+  .group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.group-item {
-  padding: 0;
-  width: 100%;
-  grid-row-start: 1;
+  .group-item {
+    padding: 0;
+    width: 100%;
+    grid-row-start: 1;
+  }
 }
 
 div {
