@@ -48,6 +48,14 @@ svg {
   max-width: 100%;
 }
 
+h2{
+  font-size: 1.125rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
 .main-container-forms {
   margin-inline: auto;
   width: 100dvw;
@@ -96,15 +104,6 @@ label {
   font-weight: 500;
 }
 
-input,
-select,
-textarea,
-button,
-fieldset,
-legend {
-  font: inherit;
-}
-
 input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {
@@ -115,6 +114,7 @@ textarea {
 }
 
 fieldset {
+  font-size: 1rem;
   margin-block-start: var(--m-space-medium);
   border: 0.09rem solid oklch(from var(--AK-blue) 75% c h);
   border-radius: 0.5rem;
