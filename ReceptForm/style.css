@@ -8,10 +8,11 @@
   --m-space-small: 1.125rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
-  --fs-medium: 1.125rem;
-  --fs-small: 1.0625rem;
-    /*** font-weight ***/
-  --fw-large: 470;
+  --fs-medium: 1.25rem;
+  --fs-small: 1.0625;
+  /*** font-weight ***/
+  --fw-medium: 400;
+  --fw-large: 500;
   /*** color ***/
   --AK-white: oklch(99.1% 0.0001 271);
   --AK-black: oklch(24.3% 0.00003 271);
@@ -53,7 +54,8 @@ svg {
 }
 
 h2 {
-  font-size: var(--fs-medium);
+  font-size: var(--fs-large);
+  font-weight: var(--fw-medium);
 }
 
 .main-container-forms {
@@ -100,10 +102,6 @@ form {
   }
 }
 
-label {
-  font-weight: var(--fw-large);
-}
-
 span {
   font-weight: var(--fw-large);
 }
@@ -127,15 +125,21 @@ fieldset {
   div {
     margin-block: var(--m-space-small);
   }
+  *:not(legend) {
+    font-size: var(--fs-small);
+  }
 }
 
-fieldset[role="radiogroup"] {
+legend {
+  font-size: var(--fs-medium);
+}
+
+fieldset fieldset[role="radiogroup"] {
   border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
   margin-block: var(--m-space-small);
   padding-block-end: var(--p-space-small);
   legend {
     font-size: var(--fs-medium);
-    font-weight: var(--fw-large);
   }
   div {
     margin-block: var(--m-space-small);
@@ -144,7 +148,6 @@ fieldset[role="radiogroup"] {
     }
   }
 }
-
 
 button {
   border: 0.0005rem, solid, var(--AK-black);
