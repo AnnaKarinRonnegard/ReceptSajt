@@ -82,6 +82,7 @@ h2 {
   }
 }
 
+
 img {
   min-width: 100%;
   object-fit: cover;
@@ -147,8 +148,9 @@ img {
   flex-direction: column;
   height: 100%;
 
-  p {
-    /* Finns bara en */
+  h2 { /* Finns bara en */
+    font-size: 1.0625rem;
+    font-weight: 400;
     background-color: oklch(
       from var(--AK-light-blue) 95% c h
     ); /* Skapar ljusblå bakgrund till text */
@@ -212,6 +214,10 @@ img {
   img {
     height: 250px;
   }
+}
+
+.p-large {
+  font-size: 1.125rem;;
 }
 
 .suggestion2 {
