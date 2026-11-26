@@ -116,7 +116,6 @@ textarea {
 }
 
 fieldset {
-  font-size: var(--fs-small);
   margin-block-start: var(--m-space-medium);
   border: 0.09rem solid oklch(from var(--AK-blue) 75% c h);
   border-radius: 0.5rem;
@@ -125,22 +124,12 @@ fieldset {
   div {
     margin-block: var(--m-space-small);
   }
-  *:not(legend) {
-    font-size: var(--fs-small);
-  }
 }
 
-legend {
-  font-size: var(--fs-medium);
-}
-
-fieldset fieldset[role="radiogroup"] {
+* fieldset[role="radiogroup"] {
   border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
   margin-block: var(--m-space-small);
   padding-block-end: var(--p-space-small);
-  legend {
-    font-size: var(--fs-medium);
-  }
   div {
     margin-block: var(--m-space-small);
     :hover {
