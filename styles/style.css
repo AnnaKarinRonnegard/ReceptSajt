@@ -128,7 +128,7 @@ nav {
   margin-inline: var(--m-space-medium);
 }
 
-.link-elements1 {
+.nav-bar {
   margin-inline: var(--m-space-medium);
   display: flex;
   gap: 1rem;
@@ -142,19 +142,13 @@ nav {
 }
 
 @media (min-width:768px) {
-  .link-elements1 {
-    margin-inline: var(--m-space-medium);
+  .nav-bar {
     gap: 3rem;
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    :focus-visible {
-      padding-inline: 1.5rem;
-      padding-block: 1rem;
-    }
   }
-  .link-elements1 li:first-child {
+  .nav-bar li:first-child {
     margin-inline-end: auto;
   }
 }
