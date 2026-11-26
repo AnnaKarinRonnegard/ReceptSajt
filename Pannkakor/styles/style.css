@@ -89,6 +89,9 @@ img {
 
 .ingredients li {
   line-height: 2; /* skriver över resetens default line-height på 1.5 */
+  :hover {
+    cursor: pointer;
+  }
 }
 
 .how-to-do li {

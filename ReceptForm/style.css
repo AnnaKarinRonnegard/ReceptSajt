@@ -135,8 +135,12 @@ fieldset[role="radiogroup"] {
   padding-block-end: var(--p-space-small);
   div {
     margin-block: var(--m-space-small);
+    :hover {
+      cursor: pointer;
+    }
   }
 }
+
 
 button {
   border: 0.0005rem, solid, var(--AK-black);
