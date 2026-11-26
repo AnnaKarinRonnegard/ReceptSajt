@@ -85,6 +85,12 @@ h4 {
   color: var(--AK-black);
 }
 
+fieldset,
+legend {
+  color: var(--AK-black);
+  font-size: 1.125rem;
+}
+
 p {
   font-size: 1.0625rem;
   margin-block: 0.0625rem; /* Lägger till margin mellan p-taggar, då de var borta */
@@ -166,8 +172,9 @@ nav {
   }
 }
 
-.section1-div2 {
+.section1-fieldset {
   margin: var(--m-space-large);
+  border-radius: 0.5rem;
   padding-inline: 6rem;
   padding-block: 2rem;
 }
