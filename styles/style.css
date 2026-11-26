@@ -141,7 +141,7 @@ nav {
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .nav-bar {
     gap: 3rem;
     flex-direction: row;
@@ -204,15 +204,29 @@ nav {
 .section1-fieldset {
   margin: var(--m-space-large);
   border-radius: 0.5rem;
-  padding-inline: 6rem;
+  padding-inline: 2rem;
   padding-block: 2rem;
+}
+
+@media (min-width: 768px) {
+  .section1-fieldset {
+    padding-inline: 3rem;
+  }
 }
 
 .section1-links {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
+@media (min-width: 768px) {
+  .section1-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .section1-div3 {
   --min-col-size: 200px;
