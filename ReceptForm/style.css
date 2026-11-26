@@ -8,6 +8,10 @@
   --m-space-small: 1.125rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
+  --fs-medium: 1.125rem;
+  --fs-small: 1.0625rem;
+    /*** font-weight ***/
+  --fw-large: 470;
   /*** color ***/
   --AK-white: oklch(99.1% 0.0001 271);
   --AK-black: oklch(24.3% 0.00003 271);
@@ -49,11 +53,7 @@ svg {
 }
 
 h2 {
-  font-size: 1.125rem;
-}
-
-h3 {
-  font-size: 1rem;
+  font-size: var(--fs-medium);
 }
 
 .main-container-forms {
@@ -101,11 +101,11 @@ form {
 }
 
 label {
-  font-weight: 500;
+  font-weight: var(--fw-large);
 }
 
 span {
-  font-weight: 500;
+  font-weight: var(--fw-large);
 }
 
 input:not([type="checkbox"], [type="radio"]),
@@ -118,7 +118,7 @@ textarea {
 }
 
 fieldset {
-  font-size: 1rem;
+  font-size: var(--fs-small);
   margin-block-start: var(--m-space-medium);
   border: 0.09rem solid oklch(from var(--AK-blue) 75% c h);
   border-radius: 0.5rem;
@@ -133,6 +133,10 @@ fieldset[role="radiogroup"] {
   border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
   margin-block: var(--m-space-small);
   padding-block-end: var(--p-space-small);
+  legend {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-large);
+  }
   div {
     margin-block: var(--m-space-small);
     :hover {
@@ -175,7 +179,7 @@ input[type="radio"] {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 1.25rem;
+  font-size: var(--fs-large);
   margin-inline: var(--m-space-medium);
-  margin-block-end: 2rem;
+  margin-block-end: var(--m-space-medium);
 }
