@@ -117,8 +117,8 @@ nav {
   margin-block-start: var(--m-space-medium);
 }
 
-.link-elements1 li,
-.link-elements2 li {
+.nav-bar li,
+.section1-links li {
   font-size: 1.5rem;
   list-style-type: none;
 }
@@ -207,6 +207,12 @@ nav {
   padding-inline: 6rem;
   padding-block: 2rem;
 }
+
+.section1-links {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .section1-div3 {
   --min-col-size: 200px;
@@ -306,19 +312,6 @@ nav {
 
 .site-hr {
   margin-block-start: var(--m-space-large);
-}
-
-.link-elements2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.link-elements3 {
-  font-size: 1.125rem;
-  font-weight: bold;
-  &:focus-visible {
-    padding: 0.3em;
-  }
 }
 
 .site-footer {
