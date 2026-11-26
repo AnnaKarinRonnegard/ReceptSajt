@@ -117,26 +117,53 @@ img {
   /* Innehåller allt */
   display: flex;
   margin-inline: auto;
+  width: fit-content;
   width: 100dvw;
-  max-width: 800px; /* Begränsar storleken*/
+  max-width: 400px; /* Begränsar storleken*/
+  background-color: var(--AK-white);
+  margin-block-end: var(
+    --m-space-medium); /* Lägger en bit bakgrundsfärg under containern */
+}
+
+@media (min-width: 768px) {
+  .main-container-pannkakor {
+  /* Innehåller allt */
+  display: flex;
+  margin-inline: auto;
+  width: 100dvw;
+  max-width: 750px; /* Begränsar storleken*/
   background-color: var(--AK-white);
   margin-block-end: var(
     --m-space-big
   ); /* Lägger en bit bakgrundsfärg under containern */
 }
+}
 
 .articel-columns {
   padding-inline: var(--p-space-medium);
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 lika stora kolumner */
+  grid-template-columns: 1fr; /* en stora kolumner */
   column-gap: var(--m-space-medium);
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+@media (min-width: 768px) {
+  .articel-columns {
+    padding-inline: var(--p-space-medium);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 lika stora kolumner */
+    column-gap: var(--m-space-medium);
+    font-family:
+      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
+
 .section1-top-image {
   img {
+    width: fit-content;
     height: 450px;
   }
 }
@@ -149,8 +176,10 @@ img {
 
   p {
     /* Finns bara en */
-    background-color: oklch(from var(--AK-light-blue) 95% c h); /* Skapar ljusblå bakgrund till text */
-    margin-block-start: var(--m-space-big);
+    background-color: oklch(
+      from var(--AK-light-blue) 95% c h
+    ); /* Skapar ljusblå bakgrund till text */
+    margin-block: var(--m-space-short);
     padding: 1em;
   }
 }
