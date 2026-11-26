@@ -104,6 +104,10 @@ label {
   font-weight: 500;
 }
 
+span {
+  font-weight: 500;
+}
+
 input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {

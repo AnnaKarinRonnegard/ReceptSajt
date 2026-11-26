@@ -55,22 +55,22 @@
                             <p>Endast hela minuter accepteras.</p>
                         </div>
                     </div>
-                <fieldset role="radiogroup">
-                    <legend>
-                        <h3>Svårhetsgrad</h3>
-                    </legend>
-                    <div class="div-radio">
-                        <input type="radio" id="easy-id" name="difficulty-level" value="easy">
-                        <label for="easy-id">Lätt</label>
-                    </div>
-                    <div class="div-radio">
-                        <input type="radio" id="medium-id" name="difficulty-level" value="average">
-                        <label for="medium-id">Mellan</label>
-                    </div>
-                    <div class="div-radio">
-                        <input type="radio" id="advanced-id" name="difficulty-level" value="advanced">
-                        <label for="advanced-id">Svår</label>
-                    </div>
+                    <fieldset role="radiogroup">
+                        <legend>
+                            <h3>Svårhetsgrad</h3>
+                        </legend>
+                        <div class="div-radio">
+                            <input type="radio" id="easy-id" name="difficulty-level" value="easy">
+                            <label for="easy-id">Lätt</label>
+                        </div>
+                        <div class="div-radio">
+                            <input type="radio" id="medium-id" name="difficulty-level" value="average">
+                            <label for="medium-id">Mellan</label>
+                        </div>
+                        <div class="div-radio">
+                            <input type="radio" id="advanced-id" name="difficulty-level" value="advanced">
+                            <label for="advanced-id">Svår</label>
+                        </div>
                     </fieldset>
                 </fieldset>
 
@@ -85,9 +85,8 @@
                     <div>
                         <label for="email-id">E-postadress *</label>
                         <input type="email" inputmode="email" id="email-id" name="user-email"
-                            placeholder="example@gmail.com" aria-describedby="emal-help" required
-                            autocomplete>
-                        <p id="emal-help">Ange din email-adress i giltigt format.</p>
+                            aria-describedby="emal-help" required autocomplete>
+                        <p id="emal-help">Ange din email-adress i formatet <span>example@gmail.com</span>.</p>
                     </div>
                 </fieldset>
 
@@ -105,7 +104,7 @@
                         <textarea id="how-to-do-id" name="how-to-do" rows="4" aria-describedby="how-to-do-help"
                             required></textarea>
                         <p id="how-to-do-help">Beskriv processen.</p>
-                    </div> 
+                    </div>
                 </fieldset>
 
                 <button type="submit">Spara</button>
