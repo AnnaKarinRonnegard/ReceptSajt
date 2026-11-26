@@ -1,9 +1,11 @@
 :root {
   /*** padding ***/
   --p-space-medium: 2rem;
+  --p-space-small: 1.125rem;
   /*** margin ***/
   --m-space-large: 4rem;
   --m-space-medium: 2rem;
+  --m-space-small: 1.125rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
   /*** color ***/
@@ -72,7 +74,7 @@ form {
 .form-div {
   padding-inline: var(--p-space-medium);
   padding-block: 0.5rem;
-  border: solid 0.05rem var(--AK-blue);
+  border: solid 0.125rem var(--AK-black);
   border-radius: 0.5rem;
 }
 
@@ -88,14 +90,6 @@ form {
     width: 100%;
     grid-row-start: 1;
   }
-}
-
-div {
-  padding-block: var(--m-space-medium);
-}
-
-.div-radio {
-  padding-block: 0.3rem;
 }
 
 label {
@@ -116,16 +110,28 @@ select,
 textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 0.0625rem solid var(--AK-black);
+  border: 0.0625rem solid var(--AK-blue);
   border-radius: 0.5rem;
 }
 
 fieldset {
   margin-block-start: var(--m-space-medium);
-  border: 0.1rem solid oklch(from var(--AK-blue) 75% c h);
+  border: 0.09rem solid oklch(from var(--AK-blue) 75% c h);
   border-radius: 0.5rem;
   padding-inline: 1rem;
   padding-block-start: 1rem;
+  div {
+    margin-block: var(--m-space-small);
+  }
+}
+
+fieldset[role="radiogroup"] {
+  border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
+  margin-block: var(--m-space-small);
+  padding-block-end: var(--p-space-small);
+  div {
+    margin-block: var(--m-space-small);
+  }
 }
 
 button {
