@@ -304,6 +304,7 @@ legend {
     padding: 0.75rem;
     img {
       margin-block-end: 0.5rem;
+      width: 100%;
       aspect-ratio: 2; /**stämmer med orginalbild**/
     }
   }
