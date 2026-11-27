@@ -110,7 +110,7 @@ input[type="radio"] {
 }
 
 button {
-  border: 0.001rem, solid, var(--AK-black);
+  border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   background-color: var(--AK-light-blue);
   margin-block-start: var(--m-space-medium);

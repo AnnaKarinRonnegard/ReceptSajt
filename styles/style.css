@@ -145,7 +145,7 @@ legend {
 }
 
 .button1 {
-  border: 0.001rem, solid, var(--AK-black);
+  border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.75rem;
@@ -156,7 +156,7 @@ legend {
 }
 
 .button2 {
-  border: 0.001rem, solid, var(--AK-black);
+  border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.75rem;
@@ -312,7 +312,7 @@ legend {
 
 .button3 {
   width: 10ch;
-  border: 0.001rem, solid, var(--AK-black);
+  border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   text-align: center;
   padding-inline: 0.5rem;
