@@ -5,6 +5,7 @@
   --m-space-large: 4rem;
   --m-space-medium: 2rem;
   --m-space-small: 1.5rem;
+  --m-space-mini: 0.5rem;
   /*** font-size ***/
   --fs-large: 1.5rem;
   /*** color ***/
@@ -116,7 +117,19 @@ legend {
 
 .header-container {
   margin-block-start: var(--m-space-large);
-  margin-inline: var(--m-space-medium);
+  margin-inline: var(--m-space-mini);
+}
+
+@media (min-width: 400px) {
+  .header-container {
+    margin-inline: var(--m-space-small);
+  }
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    margin-inline: var(--m-space-medium);
+  }
 }
 
 .nav-bar {
@@ -148,22 +161,37 @@ legend {
   border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   text-align: center;
-  padding-inline: 0.75rem;
-  padding-block: 0.5rem;
+  padding-inline: 0.2rem;
+  padding-block: 0.1rem;
+
   background-color: var(--AK-light-blue);
   color: var(--AK-black);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button1 {
+    padding-inline: 0.75rem;
+    padding-block: 0.5rem;
+  }
 }
 
 .button2 {
   border: 0.0625rem, solid, var(--AK-black);
   border-radius: 0.25rem;
   text-align: center;
-  padding-inline: 0.75rem;
-  padding-block: 0.5rem;
+  padding-inline: 0.2rem;
+  padding-block: 0.1rem;
   background-color: oklch(from var(--AK-pink) 93.4% c h);
   color: var(--AK-black);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button2 {
+    padding-inline: 0.75rem;
+    padding-block: 0.5rem;
+  }
 }
 
 .main-container {
@@ -221,14 +249,22 @@ legend {
 }
 
 .section1-fieldset {
-  margin: var(--m-space-large);
+  margin: var(--m-space-mini);
   border-radius: 0.5rem;
-  padding-inline: 2rem;
+  padding-inline: 0;
   padding-block: 2rem;
+}
+
+@media (min-width: 500px) {
+  .section1-fieldset {
+    margin: var(--m-space-small);
+    padding-inline: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
   .section1-fieldset {
+    margin: var(--m-space-large);
     padding-inline: 3rem;
   }
 }
@@ -269,7 +305,7 @@ legend {
     img {
       margin-block-end: 0.5rem;
       aspect-ratio: 2; /**stämmer med orginalbild**/
-    } 
+    }
   }
 }
 

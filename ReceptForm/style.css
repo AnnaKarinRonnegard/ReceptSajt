@@ -137,14 +137,38 @@ button {
 .main-container-forms {
   margin-inline: auto;
   width: 100dvw;
-  max-width: 700px; /* Begränsar storleken*/
+  max-width: 250px; /* Begränsar storleken*/
   margin-block-end: var(
     --m-space-medium
   ); /* Lägger en bit bakgrundsfärg under containern */
 }
 
+@media (min-width: 500px) {
+  .main-container-forms {
+  margin-inline: auto;
+  width: 100dvw;
+  max-width: 450px; /* Begränsar storleken*/
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container-forms {
+  margin-inline: auto;
+  width: 100dvw;
+  max-width: 700px; /* Begränsar storleken*/
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-container-forms {
+  margin-inline: auto;
+  width: 100dvw;
+  max-width: 950px; /* Begränsar storleken*/
+  }
+}
+
 .section-forms {
-  width: fit-content;
+  width: 100%;
   justify-self: center;
   display: grid;
   gap: 2rem;

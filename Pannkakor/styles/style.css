@@ -4,9 +4,12 @@
   --m-space-big: 2rem;
   --m-space-medium: 1.5rem;
   --m-space-short: 1rem;
+  --m-space-mini: 0.0625rem;
 
   /*** padding ***/
   --p-space-medium: 1.5em;
+  --p-space-short: 1rem;
+  --p-space-mini: 0.0625rem;
 
   /*** font weight ***/
   --fw-bold: 700;
@@ -124,17 +127,27 @@ img {
 }
 
 .articel-columns {
-  padding-inline: var(--p-space-medium);
+  padding-inline: var(--p-space-mini);
   display: grid;
   grid-template-columns: 1fr; /* en kolumn */
-  column-gap: var(--m-space-medium);
+  column-gap: var(--m-space-mini);
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+@media (min-width: 500px) {
+  .articel-columns {
+    padding-inline: var(--p-space-short);
+    column-gap: var(--m-space-short);
+    /* grid-template-columns: repeat(2, 1fr); 2 columner */
+  }
+}
+
 @media (min-width: 768px) {
   .articel-columns {
+    padding-inline: var(--p-space-medium);
+    column-gap: var(--m-space-medium);
     grid-template-columns: repeat(2, 1fr); /* 2 columner */
   }
 }
@@ -142,6 +155,7 @@ img {
 .section1-top-image {
   img {
     height: 450px;
+    width: fit-content;
   }
 }
 
@@ -164,29 +178,58 @@ img {
 }
 
 .section2-heading-and-facts > dl {
-  margin-block-start: auto; /* För dl i botten */
-  display: grid; /* Behöver sätta pga ärvs inte */
-  grid-template-columns: repeat(3, 1ft); /* 3 lika stora kolumner */
-
+  display: flex; /* Behöver sätta pga ärvs inte */
+  flex-direction: column;
   dt,
   dd {
+    align-content: center;
     /* Gemensamt för dd och dt */
-    padding-block: var(--p-space-medium);
+    padding-block: var(--p-space-mini);
+    height: 3rem;
     text-align: center;
-    border: var(--AK-black) 0.0625em solid;
-    &:not(&:nth-child(n + 5)) {
-      border-inline-end: none; /* Tar bort dubbel border */
-    }
   }
 
   dt {
-    grid-row-start: 1; /* dt startar på första raden */
     font-weight: var(--fw-bold);
+    border: var(--AK-black) 0.0625em solid;
   }
 
   dd {
-    grid-row-start: 2; /* dt startar på andra raden */
-    border-block-start: none; /* Tar bort dubbel border */
+    border-inline: var(--AK-black) 0.0625em solid;
+  }
+  *:last-child {
+    border-block-end:  var(--AK-black) 0.0625em solid;;
+  }
+}
+
+@media (min-width: 500px) {
+  .section2-heading-and-facts > dl {
+    display: grid;
+    margin-top: auto;
+    grid-template-columns: repeat(3, 1ft); /* 3 lika stora kolumner */
+
+    dt,
+    dd {
+      display: flex;
+      /* Gemensamt för dd och dt */
+      padding-block: var(--p-space-medium);
+      justify-content: center;
+      align-items: center;
+      border: var(--AK-black) 0.0625em solid;
+      &:not(&:nth-child(n + 5)) {
+        border-inline-end: none; /* Tar bort dubbel border */
+      }
+    }
+
+    dt {
+      grid-row-start: 1; /* dt startar på första raden */
+      font-weight: var(--fw-bold);
+    }
+
+    dd {
+      grid-row-start: 2; /* dd startar på andra raden */
+      border-block-start: none;
+    }
   }
 }
 
