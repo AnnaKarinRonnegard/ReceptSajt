@@ -32,9 +32,9 @@
 
 /* Förhindrar font size inflation, dvs att webbläsaren ökar den teckenstorleken automatiskt på t.ex en mobil. Detta kan förstöra designen på en responsiv design */
 html {
-  -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  -moz-text-size-adjust: none; /* För äldre Firefox */
 }
 
 img,
@@ -46,7 +46,7 @@ svg {
   max-width: 100%;
 }
 
-/****Basic settings*****/
+/****BASIC SETTINGS*****/
 
 body {
   background-color: var(--AK-pink);
@@ -62,11 +62,10 @@ h3 {
   text-wrap: pretty; /* Ser till att enstaka ord ej finns ensamt under */
   overflow-wrap: break-word; /* Hindrar overflow om mindre box-utrymme än ordlängd */
   hyphens: auto; /* Orden "break-word" avdelas efter ordlista */
-  /* max-width: 30ch; - begränsar textrader till 30 char om mycket text */
   color: var(--AK-black);
 }
 
-/***Specific settings***/
+/***SPECIFIC SETTINGS ***/
 
 h1 {
   font-size: 2.1875rem;
@@ -75,12 +74,6 @@ h1 {
 h2,
 h3 {
   font-size: 1.25rem;
-}
-
-fieldset,
-legend {
-  color: var(--AK-black);
-  font-size: 1.125rem;
 }
 
 p {
@@ -103,6 +96,12 @@ a {
 nav {
   padding-block: var(--p-space-medium);
   background-color: var(--AK-white);
+}
+
+fieldset,
+legend {
+  color: var(--AK-black);
+  font-size: 1.125rem;
 }
 
 .header-container {
@@ -143,6 +142,28 @@ nav {
   .nav-bar li:first-child {
     margin-inline-end: auto;
   }
+}
+
+.button1 {
+  border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
+  text-align: center;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  background-color: var(--AK-light-blue);
+  color: var(--AK-black);
+  cursor: pointer;
+}
+
+.button2 {
+  border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
+  text-align: center;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  background-color: oklch(from var(--AK-pink) 93.4% c h);
+  color: var(--AK-black);
+  cursor: pointer;
 }
 
 .main-container {
@@ -193,6 +214,12 @@ nav {
   }
 }
 
+.section1-div1 {
+  h2 {
+    margin: var(--m-space-medium);
+  }
+}
+
 .section1-fieldset {
   margin: var(--m-space-large);
   border-radius: 0.5rem;
@@ -223,7 +250,7 @@ nav {
   }
 }
 
-.section1-div3 {
+.section1-div2 {
   --min-col-size: 200px;
   display: grid;
   gap: 1.2rem;
@@ -244,40 +271,6 @@ nav {
       min-height: 100px;
     }
   }
-}
-
-.button1 {
-  border: 0.0005rem, solid, var(--AK-black);
-  border-radius: 0.25rem;
-  text-align: center;
-  padding-inline: 0.75rem;
-  padding-block: 0.5rem;
-  background-color: var(--AK-light-blue);
-  color: var(--AK-black);
-  cursor: pointer;
-}
-
-.button2 {
-  border: 0.0005rem, solid, var(--AK-black);
-  border-radius: 0.25rem;
-  text-align: center;
-  padding-inline: 0.75rem;
-  padding-block: 0.5rem;
-  background-color: oklch(from var(--AK-pink) 93.4% c h);
-  color: var(--AK-black);
-  cursor: pointer;
-}
-
-.button3 {
-  width: 10ch;
-  border: 0.0005rem, solid, var(--AK-black);
-  border-radius: 0.25rem;
-  text-align: center;
-  padding-inline: 0.5rem;
-  padding-block: 0.25rem;
-  background-color: var(--AK-light-blue);
-  color: var(--AK-black);
-  cursor: pointer;
 }
 
 .section2-container {
@@ -313,14 +306,20 @@ nav {
   }
 }
 
-.section1-div1 {
-  h2 {
-    margin: var(--m-space-medium);
-  }
-}
-
 .site-hr {
   margin-block-start: var(--m-space-large);
+}
+
+.button3 {
+  width: 10ch;
+  border: 0.0005rem, solid, var(--AK-black);
+  border-radius: 0.25rem;
+  text-align: center;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  background-color: var(--AK-light-blue);
+  color: var(--AK-black);
+  cursor: pointer;
 }
 
 .site-footer {
