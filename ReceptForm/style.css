@@ -36,7 +36,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} 
 
 /* Förhindrar font size inflation, dvs att webbläsaren ökar den teckenstorleken automatiskt på t.ex en mobil. Detta kan förstöra designen på en responsiv design */
 html {
@@ -53,6 +53,8 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+/***** BASIC SETTINGS *****/
 
 h2 {
   font-size: var(--fs-large);
@@ -71,19 +73,6 @@ fieldset {
   padding-block-start: var(--p-space-small);
   div {
     margin-block: var(--m-space-small);
-  }
-}
-
-* fieldset[role="radiogroup"] {
-  border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
-  margin-block-end: var(--m-space-small);
-  margin-block-start: 0.0625rem;
-  padding-block: 0.0625rem;
-  :hover {
-    cursor: pointer;
-  }
-  legend:hover {
-    cursor: unset;
   }
 }
 
@@ -128,6 +117,21 @@ button {
   padding-inline: 0.75rem;
   padding-block: var(--p-space-mini);
   cursor: pointer;
+}
+
+/***** SPECIFIC SETTINGS *****/
+
+* fieldset[role="radiogroup"] {
+  border: 0.045rem solid oklch(from var(--AK-blue) 75% c h);
+  margin-block-end: var(--m-space-small);
+  margin-block-start: 0.0625rem;
+  padding-block: 0.0625rem;
+  :hover {
+    cursor: pointer;
+  }
+  legend:hover {
+    cursor: unset;
+  }
 }
 
 .main-container-forms {
