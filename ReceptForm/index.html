@@ -53,8 +53,7 @@
                                 <label for="time-id">Tidsåtgång</label>
                                 <input type="number" inputmode="numeric" id="time-id" name="time"
                                     aria-describedby="time-help">
-                                <p id="time-help">Ange tidsåtgången.</p>
-                                <p>Endast hela minuter accepteras.</p>
+                                <p id="time-help">Endast hela minuter accepteras.</p>
                             </div>
                         </div>
 
@@ -83,12 +82,12 @@
                         <label for="user-name-id">Ditt namn</label>
                         <input type="text" id="user-name-id" name="user-name" aria-describedby="user-name-help"
                             maxlength="30" autocomplete>
-                        <p id="user-name-help">Skriv in ditt namn, max 30 bokstäver</p>
+                        <p id="user-name-help">Max 30 bokstäver</p>
                         <div>
                             <label for="email-id">E-postadress *</label>
                             <input type="email" inputmode="email" id="email-id" name="user-email"
                                 aria-describedby="emal-help" placeholder="exempel@gmail.com" required autocomplete>
-                            <p id="emal-help">Ange din email-adress i formatet <span>exempel@gmail.com</span>.</p>
+                            <p id="emal-help" class="e-mail-error">Ange din email-adress.</p>
                         </div>
                     </fieldset>
 

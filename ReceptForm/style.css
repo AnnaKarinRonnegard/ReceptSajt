@@ -36,7 +36,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-} 
+}
 
 /* Förhindrar font size inflation, dvs att webbläsaren ökar den teckenstorleken automatiskt på t.ex en mobil. Detta kan förstöra designen på en responsiv design */
 html {
@@ -72,8 +72,13 @@ fieldset {
   padding-inline: var(--p-space-small);
   padding-block-start: var(--p-space-small);
   div {
-    margin-block: var(--m-space-small);
+    margin-block-start: var(--m-space-small);
+    margin-block-end: var(--m-space-medium);
   }
+}
+
+legend {
+  margin-block-start: var(--m-space-medium);
 }
 
 form {
@@ -145,25 +150,25 @@ button {
 
 @media (min-width: 500px) {
   .main-container-forms {
-  margin-inline: auto;
-  width: 100dvw;
-  max-width: 450px; /* Begränsar storleken*/
+    margin-inline: auto;
+    width: 100dvw;
+    max-width: 450px; /* Begränsar storleken*/
   }
 }
 
 @media (min-width: 768px) {
   .main-container-forms {
-  margin-inline: auto;
-  width: 100dvw;
-  max-width: 700px; /* Begränsar storleken*/
+    margin-inline: auto;
+    width: 100dvw;
+    max-width: 700px; /* Begränsar storleken*/
   }
 }
 
 @media (min-width: 1000px) {
   .main-container-forms {
-  margin-inline: auto;
-  width: 100dvw;
-  max-width: 950px; /* Begränsar storleken*/
+    margin-inline: auto;
+    width: 100dvw;
+    max-width: 950px; /* Begränsar storleken*/
   }
 }
 
@@ -193,6 +198,10 @@ button {
     width: 100%;
     grid-row-start: 1;
   }
+}
+
+.e-mail-error {
+  display: none;
 }
 
 .footer {
